@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    int age;
+
+    printf("=====================================\n");
+    printf("        VOTING ELIGIBILITY CHECK      \n");
+    printf("=====================================\n\n");
+
+    /* Asking the user to enter age */
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    /* Checking for valid age input */
+    if (age < 0)
+    {
+        printf("\nInvalid age entered.\n");
+        printf("Age cannot be negative.\n");
+    }
+    else if (age >= 18)
+    {
+        printf("\nCongratulations!\n");
+        printf("You are %d years old.\n", age);
+        printf("You are eligible to vote.\n");
+    }
+    else
+    {
+        printf("\nSorry!\n");
+        printf("You are %d years old.\n", age);
+        printf("You are not eligible to vote.\n");
+        printf("You will be eligible after %d years.\n", 18 - age);
+    }
+
+    printf("\nThank you for using the program.\n");
+
+    return 0;
+}
